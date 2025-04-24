@@ -1,0 +1,8 @@
+_DEFAULT_:
+  tabprefix: '%luckperms_meta_tabprefix%'
+  tagprefix: '%luckperms_meta_tabprefix%'
+  customtabname: '%essentials_nickname%'
+  customtagname: '%essentials_nickname%'
+  tabsuffix: '%luckperms_meta_tabsuffix%'
+  tagsuffix: '%luckperms_meta_tabsuffix%'
+per-world: []

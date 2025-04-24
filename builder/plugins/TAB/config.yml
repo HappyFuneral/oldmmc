@@ -1,0 +1,158 @@
+# https://github.com/NEZNAMY/TAB/wiki/Feature-guide:-Header-&-Footer
+header-footer:
+  enabled: true
+  header:
+  - '&3★ &6OldMester&eMC &3★'
+  footer:
+  - '&aJó játékot kíván a &6OldMester&eMC &acsapata &c❤'
+  per-world: []
+  disable-condition: '%world%=disabledworld'
+tablist-name-formatting:
+  enabled: true
+  anti-override: true
+  disable-condition: '%world%=disabledworld'
+scoreboard-teams:
+  enabled: true
+  enable-collision: false
+  invisible-nametags: false
+  anti-override: true
+  sorting-types:
+  - GROUPS: iroda,admin,dev,staff,builder,support,jedi,stih,bsz,mutans,mh+,mh,troll+,troll,felisten,titan,zsk,elit,vip,default
+  case-sensitive-sorting: true
+  disable-condition: '%world%=disabledworld'
+belowname-objective:
+  enabled: true
+  disable-condition: '%world%=disabledworld'
+  fancy-value-default: NPC
+  fancy-value: '&c%health%'
+  value: '%health%'
+  title: '&cÉleterő'
+prevent-spectator-effect:
+  enabled: false
+bossbar:
+  enabled: false
+  toggle-command: /bossbar
+  remember-toggle-choice: false
+  hidden-by-default: false
+  bars:
+    ServerInfo:
+      style: PROGRESS
+      color: '%animation:barcolors%'
+      progress: '100'
+      text: '&fWebsite: &bwww.domain.com'
+per-world-playerlist:
+  enabled: false
+  allow-bypass-permission: false
+  ignore-effect-in-worlds:
+  - ignoredworld
+  - build
+  shared-playerlist-world-groups:
+    lobby:
+    - lobby1
+    - lobby2
+    minigames:
+    - paintball
+    - bedwars
+scoreboard:
+  enabled: false
+  toggle-command: /sb
+  remember-toggle-choice: false
+  hidden-by-default: false
+  use-numbers: false
+  static-number: 0
+  delay-on-join-milliseconds: 0
+  scoreboards:
+    scoreboard1:
+      title: "&#6600FF&lS&#6600FF&lt&#3A78FA&la&#0EF0F5&lr&#09F5E6&lN&#05FAD6&le&#00FFC7&lt&#55AAB3&lw&#AA559E&lo&#FF008A&lr&#FF008A&lk"
+      lines:
+      - ' &f &f &f  &#FF4A07&lM&#FC6427&lu&#F97E47&ls&#F69867&lt&#F2B188&lá&#EFCBA8&lr&#ECE5C8&lM&#E9FFE8&lC&8-&#FFA500&l&oB&#FFB733&l&oo&#FFC966&l&ox&#FFDB99&l&oP&#FFEDCC&l&ov&#FFFFFF&l&oP'
+      - '&e⭐ &6&l%player%'
+      - '&7&l| &fÖléseid: &4%statistic_player_kills%'
+      - '&7&l| &fHalálod: &c%statistic_deaths%'
+      - '&7&l| &fPénzed: &a%vault_eco_balance_formatted%'
+      - '&7&l| &fKitört blockok: &6%statistic_mine_block%'
+      - ' '
+      - '&e☻ &6&lINFORMÁCIÓ:'
+      - '&7&l| &fClánod: &e%clans_clan_tag%'
+      - '&7&l| &fRangod: &e%luckperms_prefix%'
+      - '&7&l| &fJátékosok: &e%server_online%'
+      - '&7&l| &fPinged: &e%ping%'
+      - '&#FFFFFF&lS&#F3F3F3&le&#E7E7E7&la&#DBDBDB&ls&#CFCFCF&lo&#C3C3C3&ln &#ABABAB&l2'
+      - ''
+    scoreboard1:
+      title: "&#6600FF&lS&#6600FF&lt&#3A78FA&la&#0EF0F5&lr&#09F5E6&lN&#05FAD6&le&#00FFC7&lt&#55AAB3&lw&#AA559E&lo&#FF008A&lr&#FF008A&lk"
+      lines:
+      - ' &f &f &f  &#FF4A07&lM&#FC6427&lu&#F97E47&ls&#F69867&lt&#F2B188&lá&#EFCBA8&lr&#ECE5C8&lM&#E9FFE8&lC&8-&#FFA500&l&oB&#FFB733&l&oo&#FFC966&l&ox&#FFDB99&l&oP&#FFEDCC&l&ov&#FFFFFF&l&oP'
+      - '&e⭐ &6&l%player%'
+      - '&7&l| &fÖléseid: &4%statistic_player_kills%'
+      - '&7&l| &fHalálod: &c%statistic_deaths%'
+      - '&7&l| &fPénzed: &a%vault_eco_balance_formatted%'
+      - '&7&l| &fKitört blockok: &6%statistic_mine_block%'
+      - ' '
+      - '&e☻ &6&lINFORMÁCIÓ:'
+      - '&7&l| &fClánod: &e%clans_clan_tag%'
+      - '&7&l| &fRangod: &e%luckperms_prefix%'
+      - '&7&l| &fJátékosok: &e%server_online%'
+      - '&7&l| &fPinged: &e%ping%'
+      - '&#FFFFFF&lS&#F3F3F3&le&#E7E7E7&la&#DBDBDB&ls&#CFCFCF&lo&#C3C3C3&ln &#ABABAB&l2'
+      - ''
+ping-spoof:
+  enabled: false
+  value: 0
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+  register-tab-expansion: false
+placeholder-output-replacements:
+  '%essentials_vanished%':
+    'yes': '&7| Vanished'
+    'no': ''
+  '%afk%':
+    true: ' &o[AFK]&r'
+    false: ''
+  '%essentials_nickname%':
+    '%essentials_nickname%': '%player%'
+conditions:
+  nick:
+    conditions:
+    - '%player%=%essentials_nickname%'
+    true: '%player%'
+    false: ~%essentials_nickname%
+placeholderapi-refresh-intervals:
+  default-refresh-interval: 500
+  '%server_uptime%': 1000
+  '%server_tps_1_colored%': 1000
+  '%server_unique_joins%': 5000
+  '%player_health%': 200
+  '%player_ping%': 1000
+  '%vault_prefix%': 1000
+  '%rel_factionsuuid_relation_color%': 1000
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- Owner
+- Admin
+- Mod
+- Helper
+- default
+debug: false
+mysql:
+  enabled: false
+  host: 127.0.0.1
+  port: 3306
+  database: tab
+  username: user
+  password: password
+use-online-uuid-in-tablist: true
+permission-refresh-interval: 1000
+enable-redisbungee-support: true
+global-playerlist:
+  update-latency: false
+  enabled: false
+playerlist-objective:
+  enabled: false
+  value: '%ping%'
+  disable-condition: '%world%=disabledworld'
+  fancy-value: '&7Ping: %ping%'
+layout:
+  enabled: false
