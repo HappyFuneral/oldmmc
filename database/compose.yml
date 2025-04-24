@@ -1,0 +1,20 @@
+networks:
+  mcnet:
+    external: true
+
+services:
+  db:
+    image: mysql:latest
+    container_name: db
+    user: 0:0
+    volumes:
+      - ./init.sql:/data/application/init.sql
+      - ./data:/var/lib/mysql/
+    environment:
+      TZ: Europe/Budapest
+      MYSQL_ROOT_PASSWORD: SJD3uhsdaf
+      MYSQL_DATABASE: authme
+    networks:
+      - mcnet
+    working_dir: /data
+    restart: unless-stopped
