@@ -89,10 +89,7 @@ try = [
 
 [forced-hosts]
 # Configure your forced hosts here.
-"lobby.example.com" = [
-    "lobby"
-]
-"proxy.example.com" = [
+"play.oldmestermc.hu" = [
     "proxy"
 ]
 
