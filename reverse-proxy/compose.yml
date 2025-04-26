@@ -3,11 +3,9 @@ services:
     build: ./data
     restart: unless-stopped
     container_name: appProxy
-    environment:
-      - MSSQL_SA_PASSWORD=Password1*
     volumes:
         - ./data/default.conf:/etc/nginx/conf.d/default.conf    
     ports:
       - "80:80"
     networks:
-      - 'mcnet'
+      - mcnet
